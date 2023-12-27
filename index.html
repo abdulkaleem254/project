@@ -18,11 +18,11 @@
                         </div>
                         <div class="card-number">
                             <label for="cardNumber">Card Number:</label>
-                            <input type="text" autocomplete="off" placeholder="Card holder name" name="cardNumber" id="cardNumber" onkeypress="return event.charCode>=48 && event.charCode<=57" minlength="19" maxlength="19" required>
+                            <input type="text" autocomplete="off" placeholder="Card holder name" name="cardNumber" id="cardNumber" oninput="handleFormat(event)" minlength="19" maxlength="19" required>
                         </div>
                         <div class="expiry-date">
                             <label for="expDate">Validity:</label>
-                            <input type="text" autocomplete="off" placeholder="Expiry date" name="expDate" id="expDate" onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="5" required>
+                            <input type="text" autocomplete="off" placeholder="Expiry date" name="expDate" id="expDate" oninput="handleFormatValid(event)" maxlength="5" required>
                         </div>
                         <div class="mask-card">
                             <label for="maskCard">Generate mask card:</label>
