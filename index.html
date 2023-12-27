@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debit Card</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- Getting card details -->
+                <div class="cardForm">
+                    <form action="" onsubmit="submitted(event)">
+                        <div class="card-holder-name">
+                            <label for="cardHolderName">Card Holder Name:</label>
+                            <input type="text" autocomplete="off" placeholder="Card holder name" name="cardHolderName" id="cardHolderName" onkeypress="return event.charCode>=65 && event.charCode<=90 || event.charCode >= 97 && event.charCode <= 122 ||  event.charCode == 32" required>
+                        </div>
+                        <div class="card-number">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" autocomplete="off" placeholder="Card holder name" name="cardNumber" id="cardNumber" onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="19" required>
+                        </div>
+                        <div class="expiry-date">
+                            <label for="expDate">Validity:</label>
+                            <input type="text" autocomplete="off" placeholder="Expiry date" name="expDate" id="expDate" onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="5" required>
+                        </div>
+                        <div class="mask-card">
+                            <label for="maskCard">Generate mask card:</label>
+                            <label for="maskCard" class="switch">
+                                <input type="checkbox" id="maskCard" onclick="generateMask()"/>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Displaying the generated card -->
+                <div class="atm-card">
+                    <div class="image">
+                        <div class="bank-name">
+                            <div>
+                                <h4>SIB Bank</h4>
+                            </div>
+                            <div>
+                                <img src="./assets/contact-less.png" alt="">
+                            </div>
+                        </div>
+                        <div class="chip-row">
+                            <img src="./assets/chip.png" class="chip" alt="">
+
+                        <h4>VISA CARD</h4>
+                        </div>
+                        <div class="number-row">
+                            <h4 id="holderCardNumber">0000 0000 0000 0000</h4>
+                        </div>
+                        <div class="name-exp">
+                            
+                            <div class="card-holder">
+                                <p>Card Holder : <span id="holder-name">XYZ</span></p>  
+                            </div>
+                            <div class="expiry-date">
+                                <p>Expiry date : <span id="validDate">12/26</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
