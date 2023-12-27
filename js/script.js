@@ -18,7 +18,7 @@ function submitted(event){
     
 }
 function formattedString(val){
-    if(maskCard.checked==true){y
+    if(maskCard.checked==true){
         return val.replace(/\d{4} (?=\d{4})/g,'XXXX ')
     }
     else{
