@@ -41,7 +41,7 @@ function handleFormatValid(event) {
         let numericValue = element.value.replace(/[^0-9/]/g, '');
 
         if (element.value.length === 2) {
-            alert(numericValue);
+            // alert(numericValue);
             numericValue = numericValue + '/';
         }
         element.value=numericValue;
@@ -52,6 +52,7 @@ function handleFormatValid(event) {
 
 function formattedString(val){
     if(maskCard.checked==true){
+        alert("checked")
         return val.replace(/\d{4} (?=\d{4})/g,'XXXX ')
     }
     else{
