@@ -214,6 +214,9 @@ input:checked + .slider {
     }
 }
 @media screen and (max-width:560px){
+    .row{
+        width: 100%;
+    }
     .row>div.cardForm>form{
         width: 95%;
     }
