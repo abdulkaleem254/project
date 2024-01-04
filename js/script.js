@@ -26,6 +26,10 @@ function handleFormat(event){
     // Remove non-numeric characters using a regular expression
     let numericValue = element.value.replace(/[^0-9/\b ]/g, '');
 
+    if(element.value.length==4 || element.value.length==8+1 || element.value.length==12+2){
+            numericValue=numericValue+" ";
+        }
+
     // Update the input field with the numeric value
     element.value = numericValue;
 }
